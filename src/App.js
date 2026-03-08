@@ -125,32 +125,7 @@ export default function App() {
       {/* Main layout: thumbnail left + puzzle + thumbnail right */}
       <div style={{ display:"flex", alignItems:"center", gap:"16px", zIndex:1 }}>
 
-        {/* Left: reference thumbnail */}
-        <div style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:"8px" }}>
-          <div style={{
-            width: thumbSize,
-            height: thumbSize,
-            borderRadius:"12px",
-            overflow:"hidden",
-            border: "2px solid rgba(218,112,214,0.4)",
-            boxShadow: "0 0 20px rgba(180,0,255,0.2)",
-            position:"relative",
-          }}>
-            <img src={IMG} alt="reference" style={{ width:"100%", height:"100%", objectFit:"cover", filter: won ? "none" : "blur(6px) brightness(0.5)" }} />
-            {!won && (
-              <div style={{
-                position:"absolute", inset:0, display:"flex", alignItems:"center", justifyContent:"center",
-                flexDirection:"column", gap:"4px",
-              }}>
-                <div style={{ fontSize:"22px" }}>🔒</div>
-                <div style={{ fontSize:"9px", color:"#da70d6", letterSpacing:"1px", textAlign:"center", padding:"0 4px" }}>Solve to<br/>reveal</div>
-              </div>
-            )}
-          </div>
-          <div style={{ fontSize:"10px", color:"#7a4a8a", letterSpacing:"1px", textAlign:"center" }}>
-            {won ? "✨ Revealed" : "Reference"}
-          </div>
-        </div>
+      
 
         {/* Puzzle board */}
         <div style={{
@@ -229,24 +204,7 @@ export default function App() {
           )}
         </div>
 
-        {/* Right: decorative panel */}
-        <div style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:"12px" }}>
-          <div style={{
-            width: thumbSize,
-            padding:"14px 8px",
-            borderRadius:"12px",
-            border:"1px solid rgba(218,112,214,0.2)",
-            background:"rgba(255,255,255,0.03)",
-            display:"flex", flexDirection:"column", alignItems:"center", gap:"8px",
-          }}>
-            <div style={{ fontSize:"22px", animation:"pulse 2s ease-in-out infinite" }}>🌸</div>
-            <div style={{ fontSize:"9px", color:"#9b6bb5", letterSpacing:"1px", textAlign:"center", lineHeight:"1.6" }}>
-              WOMEN'S<br/>DAY<br/>2026
-            </div>
-            <div style={{ width:"30px", height:"1px", background:"linear-gradient(to right, transparent, #da70d6, transparent)" }} />
-            <div style={{ fontSize:"16px", animation:"pulse 2s ease-in-out infinite", animationDelay:"0.5s" }}>♀</div>
-          </div>
-        </div>
+      
       </div>
 
       {/* Win message below */}
