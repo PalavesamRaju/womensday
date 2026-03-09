@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 
 const GRID = 6;
 const TOTAL = GRID * GRID;
-const IMG = "/WhatsApp Image 2026-03-05 at 8.03.40 AM.jpeg";
+const IMG = "/asd.jpeg";
 
 function shuffle(arr) {
   const a = [...arr];
